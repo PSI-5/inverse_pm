@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>In Verse</title>
+    <style>
+        body {
+            background-image: url('bg.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        pre {
+            background: rgba(244, 244, 244, 0.8);
+            overflow-y: auto;
+            padding: 10px;
+            border-radius: 5px;
+            white-space: pre-wrap;
+            font-size: 13px;
+            font-family: monospace;
+            text-align: center;
+            display: block;
+            width: 80%;
+            height: 400px;
+            margin: 20px auto;
+            line-height: 1.5;
+        }
+        button {
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>In Verse</h1>
+    <pre id="poem">
+G must have a whirlpool somewhere in her family tree -
+the way she engulfs the gulfs, bites at the bights
+lochs me in, swallows the quay
+to the tangles of her life, the lights
+
+on the rockiest headland, we watch the wind teethe -
+gulls goose-step as the waters fold
+in self-administered coup. it ceases to seethe
+and curls up, mutated, afraid of its own cold
+
+G sees herself contemplating life
+and tells me how every genome is in flux, fickle
+everything branched and branching in constant strife
+before some immortal Darwinian sickle
+
+that all of what we are is four splayed arms -
+you, chromatin, fix the color her hair his tone
+compress and snip my spirit, my charms
+bone shape, heart let to forces unknown
+    </pre>
+
+    <button onclick="mutatePoem()">Mutate Poem</button>
+
+    <script>
+        // Poem alternatives for mutation
+        const alternatives = [
+            ["G must have a whirlpool somewhere in her family tree -"],
+            ["the way she engulfs the gulfs, bites at the bights", "the way she bays at the bays, bites at the bights"],
+            ["lochs me in, swallows the quay", "locks me in, swallows the key"],
+            ["to the tangles of her life, the lights"],
+            [""],
+            ["on the rockiest headland, we watch the wind teethe -", "on the sandiest headland, wind teethes -"],
+            ["gulls goose-step as the waters fold", "we watch geese duck as waters fold"],
+            ["in self-administered coup. it ceases to seethe", "in self-administered coup. it roils, seethes"],
+            ["and curls up, mutated, afraid of its own cold"],
+            [""],
+            ["G sees herself contemplating life", "life contemplating herself sees G"],
+            ["and tells me every genome is in flux, fickle"],
+            ["everything branched and branching in constant strife", "everything branched and branching, infinite tree"],
+            ["before some immortal Darwinian sickle"],
+            [""],
+            ["that all of what we are is four splayed arms -"],
+            ["you, chromatin, fix the color of her hair, his tone", "euchromatin fixes the color of her hair, his tone", "you, chromatin, fix the color of her hair, histone"],
+            ["compress and snip my spirit, my charms", "compress and SNP my spirit, my charms"],
+            ["bone shape, heart let to forces unknown", "unknown forces to let her heart shape bone", "unknown forces to let heart shape bone"]
+        ];
+
+        const conditions = [
+            [-1],
+            [-1],
+            [-1],
+            [-1],
+            [-1],
+            [70,71],
+            [-1],
+            [50,51],
+            [-1],
+            [-1],
+            [130,131],
+            [-1],
+            [100,101],
+            [-1],
+            [-1],
+            [-1],
+            [-1],
+            [-1],
+            [-1]
+        ];
+
+        // Original poem
+        let originalPoem = `
+G must have a whirlpool somewhere in her family tree -
+the way she engulfs the gulfs, bites at the bights
+lochs me in, swallows the quay
+to the tangles of her life, the lights
+
+on the rockiest headland, we watch the wind teethe -
+gulls goose-step as the waters fold
+in self-administered coup. it ceases to seethe
+and curls up, mutated, afraid of its own cold
+
+G sees herself contemplating life
+and tells me how every genome is in flux, fickle
+everything branched and branching in constant strife
+before some immortal Darwinian sickle
+
+that all of what we are is four splayed arms -
+you, chromatin, fix the color her hair his tone
+compress and snip my spirit, my charms
+bone shape, heart let to forces unknown
+        `.trim();
+
+        // Mutation function
+        function mutatePoem() {
+            let lines = originalPoem.split("\n");
+
+            // Get all valid line indices that have alternatives
+            let validLines = alternatives.map((alts, i) => alts.length > 1 ? i : -1).filter(i => i !== -1);
+
+            if (validLines.length === 0) return; // No lines to mutate
+
+            // Select a random line to mutate
+            let lineIndex = validLines[Math.floor(Math.random() * validLines.length)];
+            let newLine = alternatives[lineIndex][Math.floor(Math.random() * alternatives[lineIndex].length)];
+
+            // Replace the selected line
+            lines[lineIndex] = newLine;
+
+            // Handle linked line mutations
+            if (conditions[lineIndex].length > 1) {
+                let newLineIndex = alternatives[lineIndex].indexOf(newLine);
+                if (newLineIndex !== -1 && newLineIndex < conditions[lineIndex].length) {
+                    let linkLine = Math.floor(conditions[lineIndex][newLineIndex] / 10);
+                    let altLink = conditions[lineIndex][newLineIndex] % 10;
+
+                    if (linkLine < lines.length && altLink < alternatives[linkLine].length) {
+                        lines[linkLine] = alternatives[linkLine][altLink];
+                    }
+                }
+            }
+
+            // Update the poem content
+            document.getElementById("poem").innerText = lines.join("\n");
+        }
+    </script>
+
+</body>
+</html>
+
