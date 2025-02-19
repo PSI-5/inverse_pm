@@ -12,12 +12,12 @@
             background-repeat: no-repeat;
             font-family: Arial, sans-serif;
             text-align: center;
-            padding: 20px;
+            padding: 30px;
         }
         pre {
             background: rgba(244, 244, 244, 0.8);
             overflow-y: auto;
-            padding: 10px;
+            padding: 20px;
             border-radius: 5px;
             white-space: pre-wrap;
             font-size: 13px;
@@ -26,7 +26,7 @@
             display: block;
             width: 80%;
             height: 400px;
-            margin: 20px auto;
+            margin: 30px auto;
             line-height: 1.5;
         }
         button {
@@ -38,7 +38,7 @@
 </head>
 <body>
 
-    <h1>In Verse</h1>
+    <h1 align="center", style="font-size:50px;">In Verse</h1>
     <pre id="poem">
 G must have a whirlpool somewhere in her family tree -
 the way she engulfs the gulfs, bites at the bights
@@ -50,7 +50,7 @@ gulls goose-step as the waters fold
 in self-administered coup. it ceases to seethe
 and curls up, mutated, afraid of its own cold
 
-G sees herself contemplating life
+<b> G sees herself contemplating life</b>
 and tells me how every genome is in flux, fickle
 everything branched and branching in constant strife
 before some immortal Darwinian sickle
@@ -58,7 +58,22 @@ before some immortal Darwinian sickle
 that all of what we are is four splayed arms -
 you, chromatin, fix the color her hair his tone
 compress and snip my spirit, my charms
-bone shape, heart let to forces unknown
+<b>bone shape, heart let to forces unknown</b>
+
+and constancy is scarce, but G gestures to me wild
+tells me about inversion, when these arms upend
+some holy order of orders becomes defiled
+and traps a snapshot of form, blocks the blend
+
+yes, like the way the wave redacts itself, and caves
+G laughs, and reminds me were all once marine
+<b>we are part</b> vortex. there is structure, that behaves
+how easy it is to stay the same. to regress to the mean
+
+it dawns slow. the pact of pulsing mass that becomes me
+some barely-bespoke notch of some eternal genetic slab
+like our mothers, we cast our form into some stochastic sea
+and learn, cherish and then lose the gift of gab
     </pre>
 
     <button onclick="mutatePoem()">Mutate Poem</button>
@@ -76,7 +91,7 @@ bone shape, heart let to forces unknown
             ["in self-administered coup. it ceases to seethe", "in self-administered coup. it roils, seethes"],
             ["and curls up, mutated, afraid of its own cold"],
             [""],
-            ["G sees herself contemplating life", "life contemplating herself sees G"],
+	    ["<b>G sees herself contemplating life</b>", "<b>life contemplating herself sees G</b>"],
             ["and tells me every genome is in flux, fickle"],
             ["everything branched and branching in constant strife", "everything branched and branching, infinite tree"],
             ["before some immortal Darwinian sickle"],
@@ -84,7 +99,22 @@ bone shape, heart let to forces unknown
             ["that all of what we are is four splayed arms -"],
             ["you, chromatin, fix the color of her hair, his tone", "euchromatin fixes the color of her hair, his tone", "you, chromatin, fix the color of her hair, histone"],
             ["compress and snip my spirit, my charms", "compress and SNP my spirit, my charms"],
-            ["bone shape, heart let to forces unknown", "unknown forces to let her heart shape bone", "unknown forces to let heart shape bone"]
+            ["<b>bone shape, heart let to forces unknown</b>", "<b>unknown forces to let her heart shape bone</b>", "<b>unknown forces to let heart shape bone</b>"],
+	    [""],
+	    ["and constancy is scarce, but G gestures to me wild"],
+            ["tells me about inversion, when these arms upend"]	,
+	    ["some holy order of orders becomes defiled"],
+	    ["and traps a snapshot of form, blocks the blend","and snaps a trap shut of form, blocks the blend"],
+	    [""],
+	    ["yes like the way the wave redacts itself, and caves"],
+            ["G laughs, and reminds me were all once marine"],
+	    ["<b>we are part vortex.</b> there is structure, that behaves","<b>part vortex are we.</b> there is structure, that behaves","<b>we are part vortex.</b> there is structure, that misbehaves"],
+	    ["how easy it is to stay the same. to regress to the mean","how easy it is to change your fate, to reshape a gene", "how easy it is to change your fate, to deviate from the mean"],
+	    [""],
+	    ["it dawns slow. the pact of pulsing mass that becomes me"],
+	    ["some barely-bespoke notch of some eternal genetic slab","some bravely-bespoke notch of some eternal genetic slab","some bravely spoken notch of some eternal genetic slab"],
+	    ["like our mothers, we cast our form into some stochastic sea"],
+	    ["and lean, cherish and then lose the gift of gab"]
         ];
 
         const conditions = [
@@ -106,6 +136,21 @@ bone shape, heart let to forces unknown
             [-1],
             [-1],
             [-1],
+            [-1],
+	    [-1],
+            [-1],
+            [-1],
+            [-1],
+            [-1],
+            [-1],
+	    [-1],
+            [-1],
+            [-1],
+            [-1],
+            [-1],
+            [-1],
+	    [-1],
+            [-1],
             [-1]
         ];
 
@@ -121,7 +166,7 @@ gulls goose-step as the waters fold
 in self-administered coup. it ceases to seethe
 and curls up, mutated, afraid of its own cold
 
-G sees herself contemplating life
+<b>G sees herself contemplating life</b>
 and tells me how every genome is in flux, fickle
 everything branched and branching in constant strife
 before some immortal Darwinian sickle
@@ -129,7 +174,22 @@ before some immortal Darwinian sickle
 that all of what we are is four splayed arms -
 you, chromatin, fix the color her hair his tone
 compress and snip my spirit, my charms
-bone shape, heart let to forces unknown
+<b>bone shape, heart let to forces unknown</b>
+
+and constancy is scarce, but G gestures to me wild
+tells me about inversion, when these arms upend
+some holy order of orders becomes defiled
+and traps a snapshot of form, blocks the blend
+
+yes, like the way the wave redacts itself, and caves
+G laughs, and reminds me were all once marine
+<b>we are part vortex.</b> there is structure, that behaves
+how easy it is to stay the same. to regress to the mean
+
+it dawns slow. the pact of pulsing mass that becomes me
+some barely-bespoke notch of some eternal genetic slab
+like our mothers, we cast our form into some stochastic sea
+and learn, cherish and then lose the gift of gab
         `.trim();
 
         // Mutation function
@@ -162,10 +222,10 @@ bone shape, heart let to forces unknown
             }
 
             // Update the poem content
-            document.getElementById("poem").innerText = lines.join("\n");
+            document.getElementById("poem").innerHTML = lines.join("\n");
         }
     </script>
 
-</body>
+</body>`
 </html>
 
