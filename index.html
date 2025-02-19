@@ -40,40 +40,40 @@
 
     <h1 align="center", style="font-size:50px;">In Verse</h1>
     <pre id="poem">
-G must have a whirlpool somewhere in her family tree -
-the way she engulfs the gulfs, bites at the bights
+G must have a whirlpool somewhere in her family tree.
+the way she engulfs the gulfs, bites at the bights,
 lochs me in, swallows the quay
-to the tangles of her life, the lights
+to the tangles of her life, the sights, the lights.
 
 on the rockiest headland, we watch the wind teethe -
-gulls goose-step as the waters fold
+gulls goose-step as the waters fold,
 in self-administered coup. it ceases to seethe
-and curls up, mutated, afraid of its own cold
+and curls up, mutated, afraid of its own cold.
 
 <b> G sees herself contemplating life</b>
-and tells me how every genome is in flux, fickle
+and tells me how every genome is in flux, fickle,
 everything branched and branching in constant strife
-before some immortal Darwinian sickle
+before some immortal Darwinian sickle.
 
 that all of what we are is four splayed arms -
-you, chromatin, fix the color her hair his tone
-compress and snip my spirit, my charms
-<b>bone shape, heart let to forces unknown</b>
+you, chromatin, fix the color of her hair, his tone,
+compress and snip my spirit, my charms,
+<b>bone shape, heart let to forces unknown.</b>
 
-and constancy is scarce, but G gestures to me wild
-tells me about inversion, when these arms upend
-some holy order of orders becomes defiled
-and traps a snapshot of form, blocks the blend
+and constancy is scarce, but G gestures to me wild,
+tells me about inversion, when these arms upend,
+some holy order of orders becomes defiled,
+and traps a snapshot of form, blocks the blend.
 
-yes, like the way the wave redacts itself, and caves
-G laughs, and reminds me were all once marine
-<b>we are part</b> vortex. there is structure, that behaves
-how easy it is to stay the same. to regress to the mean
+'yes, like the way the wave redacts itself, and caves.'
+G laughs, and reminds me were all once marine.
+<b>we are part vortex </b>. there is structure, that behaves
+how easy it is to stay the same. to regress to the mean.
 
-it dawns slow. the pact of pulsing mass that becomes me
-some barely-bespoke notch of some eternal genetic slab
-like our mothers, we cast our form into some stochastic sea
-and learn, cherish and then lose the gift of gab
+it dawns slow. the pact of pulsing mass that becomes me-
+some barely-bespoke notch of some eternal genetic slab.
+like our mothers, we cast our form into some stochastic sea,
+and learn, cherish, and then lose the gift of the gab.
     </pre>
 
     <button onclick="mutatePoem()">Mutate Poem</button>
@@ -81,40 +81,40 @@ and learn, cherish and then lose the gift of gab
     <script>
         // Poem alternatives for mutation
         const alternatives = [
-            ["G must have a whirlpool somewhere in her family tree -"],
-            ["the way she engulfs the gulfs, bites at the bights", "the way she bays at the bays, bites at the bights"],
+            ["G must have a whirlpool somewhere in her family tree."],
+            ["the way she engulfs the gulfs, bites at the bights,", "the way she bays at the bays, bites at the bights,"],
             ["lochs me in, swallows the quay", "locks me in, swallows the key"],
-            ["to the tangles of her life, the lights"],
+            ["to the tangles of her life, the sights, the lights."],
             [""],
             ["on the rockiest headland, we watch the wind teethe -", "on the sandiest headland, wind teethes -"],
-            ["gulls goose-step as the waters fold", "we watch geese duck as waters fold"],
+            ["gulls goose-step as the waters fold,", "we watch geese duck as waters fold,"],
             ["in self-administered coup. it ceases to seethe", "in self-administered coup. it roils, seethes"],
             ["and curls up, mutated, afraid of its own cold"],
             [""],
 	    ["<b>G sees herself contemplating life</b>", "<b>life contemplating herself sees G</b>"],
-            ["and tells me every genome is in flux, fickle"],
+            ["and tells me every genome is in flux, fickle,"],
             ["everything branched and branching in constant strife", "everything branched and branching, infinite tree"],
-            ["before some immortal Darwinian sickle"],
+            ["before some immortal Darwinian sickle."],
             [""],
             ["that all of what we are is four splayed arms -"],
-            ["you, chromatin, fix the color of her hair, his tone", "euchromatin fixes the color of her hair, his tone", "you, chromatin, fix the color of her hair, histone"],
-            ["compress and snip my spirit, my charms", "compress and SNP my spirit, my charms"],
-            ["<b>bone shape, heart let to forces unknown</b>", "<b>unknown forces to let her heart shape bone</b>", "<b>unknown forces to let heart shape bone</b>"],
+            ["you, chromatin, fix the color of her hair, his tone,", "euchromatin fixes the color of her hair, his tone,", "you, chromatin, fix the color of her hair, histone,"],
+            ["compress and snip my spirit, my charms,", "compress and SNP my spirit, my charms,"],
+            ["<b>bone shape, heart let to forces unknown.</b>", "<b>unknown forces to let her heart shape bone.</b>", "<b>unknown forces to let heart shape bone.</b>"],
 	    [""],
-	    ["and constancy is scarce, but G gestures to me wild"],
-            ["tells me about inversion, when these arms upend"]	,
-	    ["some holy order of orders becomes defiled"],
-	    ["and traps a snapshot of form, blocks the blend","and snaps a trap shut of form, blocks the blend"],
+	    ["and constancy is scarce, but G gestures to me wild,"],
+            ["tells me about inversion, when these arms upend,"]	,
+	    ["some holy order of orders becomes defiled,"],
+	    ["and traps a snapshot of form, blocks the blend.","and snaps a trap shut of form, blocks the blend."],
 	    [""],
-	    ["yes like the way the wave redacts itself, and caves"],
-            ["G laughs, and reminds me were all once marine"],
-	    ["<b>we are part vortex.</b> there is structure, that behaves","<b>part vortex are we.</b> there is structure, that behaves","<b>we are part vortex.</b> there is structure, that misbehaves"],
-	    ["how easy it is to stay the same. to regress to the mean","how easy it is to change your fate, to reshape a gene", "how easy it is to change your fate, to deviate from the mean"],
+	    ["'yes, like the way the wave redacts itself, and caves.'"],
+            ["G laughs, and reminds me were all once marine."],
+	    ["<b>we are part vortex.</b> there is structure, that behaves","<b>part vortex are we.</b> there is structure, that misbehaves","<b>we are part vortex.</b> there is structure, that misbehaves"],
+	    ["how easy it is to stay the same. to regress to the mean.","how easy it is to change your fate, to reshape a gene.", "how easy it is to change your fate, to deviate from the mean."],
 	    [""],
-	    ["it dawns slow. the pact of pulsing mass that becomes me"],
-	    ["some barely-bespoke notch of some eternal genetic slab","some bravely-bespoke notch of some eternal genetic slab","some bravely spoken notch of some eternal genetic slab"],
-	    ["like our mothers, we cast our form into some stochastic sea"],
-	    ["and lean, cherish and then lose the gift of gab"]
+	    ["it dawns slow. the pact of pulsing mass that becomes me-"],
+	    ["some barely-bespoke notch of some eternal genetic slab.","some bravely-bespoke notch of some eternal genetic slab.","some bravely spoken notch of some eternal genetic slab."],
+	    ["like our mothers, we cast our form into some stochastic sea,"],
+	    ["and learn, cherish, and then lose the gift of the gab."]
         ];
 
         const conditions = [
@@ -156,40 +156,40 @@ and learn, cherish and then lose the gift of gab
 
         // Original poem
         let originalPoem = `
-G must have a whirlpool somewhere in her family tree -
-the way she engulfs the gulfs, bites at the bights
+G must have a whirlpool somewhere in her family tree.
+the way she engulfs the gulfs, bites at the bights,
 lochs me in, swallows the quay
-to the tangles of her life, the lights
+to the tangles of her life, the sights, the lights.
 
 on the rockiest headland, we watch the wind teethe -
-gulls goose-step as the waters fold
+gulls goose-step as the waters fold,
 in self-administered coup. it ceases to seethe
-and curls up, mutated, afraid of its own cold
+and curls up, mutated, afraid of its own cold.
 
 <b>G sees herself contemplating life</b>
-and tells me how every genome is in flux, fickle
+and tells me how every genome is in flux, fickle,
 everything branched and branching in constant strife
-before some immortal Darwinian sickle
+before some immortal Darwinian sickle.
 
 that all of what we are is four splayed arms -
-you, chromatin, fix the color her hair his tone
-compress and snip my spirit, my charms
-<b>bone shape, heart let to forces unknown</b>
+you, chromatin, fix the color of her hair, his tone,
+compress and snip my spirit, my charms,
+<b>bone shape, heart let to forces unknown.</b>
 
-and constancy is scarce, but G gestures to me wild
-tells me about inversion, when these arms upend
-some holy order of orders becomes defiled
-and traps a snapshot of form, blocks the blend
+and constancy is scarce, but G gestures to me wild,
+tells me about inversion, when these arms upend,
+some holy order of orders becomes defiled,
+and traps a snapshot of form, blocks the blend.
 
-yes, like the way the wave redacts itself, and caves
-G laughs, and reminds me were all once marine
+'yes, like the way the wave redacts itself, and caves.'
+G laughs, and reminds me were all once marine.
 <b>we are part vortex.</b> there is structure, that behaves
-how easy it is to stay the same. to regress to the mean
+how easy it is to stay the same. to regress to the mean.
 
-it dawns slow. the pact of pulsing mass that becomes me
-some barely-bespoke notch of some eternal genetic slab
-like our mothers, we cast our form into some stochastic sea
-and learn, cherish and then lose the gift of gab
+it dawns slow. the pact of pulsing mass that becomes me-
+some barely-bespoke notch of some eternal genetic slab.
+like our mothers, we cast our form into some stochastic sea,
+and learn, cherish, and then lose the gift of the gab.
         `.trim();
 
         // Mutation function
